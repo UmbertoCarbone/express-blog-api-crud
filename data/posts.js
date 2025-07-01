@@ -4,8 +4,16 @@ const posts = [
   {
     id: 1,
     title: "Ciambellone",
-    content:"Sarà che una volta le cose erano più semplici, ma erano anche molto buone. Come le crostate, i biscotti o il ciambellone che la nonna preparava anche all'ultimo sapendo che sareste passati per la merenda: uova, zucchero e farina. Niente di più basic ma che tra le sue mani, mescolando e infornando, diventava una delle prelibatezze per accompagnare il succo di frutta al pomeriggio o il latte e caffè al mattino. Ecco la nostra ricetta del ciambellone a quale atmosfera si ispira, quella di casa e genuinità: con una manciata di scorze di limone o di arancia e una spolverata di zucchero a velo renderete questa soffice delizia profumata e invitante. E per una volta sarà la nonna a farvi i complimenti per aver preparato un morbido ciambellone, così buono che non passa mai di moda!",
-    image: "/imgs/posts/ciambellone.avif",
+    content: `Sarà che una volta le cose erano più semplici,
+     ma erano anche molto buone. Come le crostate,
+      i biscotti o il ciambellone che la nonna preparava anche all'ultimo sapendo che sareste passati per la merenda:
+       uova, zucchero e farina. Niente di più basic ma che tra le sue mani, mescolando e infornando,
+        diventava una delle prelibatezze per accompagnare il succo di frutta al pomeriggio o il latte
+         e caffè al mattino. Ecco la nostra ricetta del ciambellone a quale atmosfera si ispira,
+          quella di casa e genuinità: con una manciata di scorze di limone o di arancia e una spolverata
+           di zucchero a velo renderete questa soffice delizia profumata e invitante. E per una volta
+            sarà la nonna a farvi i complimenti per aver preparato un morbido ciambellone, così buono che non passa mai di moda!`,
+    /* image:  "/imgs/posts/ciambellone.avif",  */
     tags: ["Dolci", "Torte", "Ricette vegetariane", "Ricette al forno"],
   },
   {
@@ -20,7 +28,7 @@ const posts = [
               Cracker di lupini
               Cracker allo zafferano
               Cracker ai semi`,
-    image: "cracker_barbabietola.avif",
+    /* image: "cracker_barbabietola.avif", */
     tags: ["Antipasti", "Ricette vegetariane", "Ricette al forno"],
   },
   {
@@ -35,7 +43,7 @@ const posts = [
             Pasta con barbabietola e pecorino
             Gnocchi di barbabietola
             Tagliatelle alla barbabietola con asparagi`,
-    image: "/imgs/posts/pasta_barbabietola.avif",
+    /* image: "/imgs/posts/pasta_barbabietola.avif", */
     tags: ["Primi piatti", "Ricette vegetariane"],
   },
   {
@@ -45,7 +53,7 @@ const posts = [
      utilizzando gli ingredienti che si avevano sempre a disposizione in casa: pane raffermo, uova, latte e zucchero, che noi abbiamo deciso di aromatizzare con un pizzico di cannella.
       Facile e veloce da realizzare, il pane fritto dolce vi riporterà con la mente ai sapori dell'infanzia… 
       gustatelo da solo o accompagnatelo con frutta fresca e yogurt per uno spuntino tanto goloso quanto genuino!`,
-    image: "/imgs/posts/pane_fritto_dolce.avif",
+    /* image: "/imgs/posts/pane_fritto_dolce.avif", */
     tags: ["Dolci", "Dolci veloci", "Ricette veloci", "Ricette vegetariane"],
   },
   {
@@ -58,7 +66,7 @@ const posts = [
         A seconda dei gusti e delle disponibilità del momento, al pane ammollato ogni famiglia univa ingredienti diversi,
          chi l'uvetta o chi i pinoli ad esempio. Noi vi presentiamo la nostra versione con l'aggiunta di cacao e amaretti:
           perfetta da gustare per una merenda dal sapore rustico, la torta paesana è un perfetto dolce di recupero quando si ha del pane avanzato… ed è ancora più buona il giorno dopo!`,
-    image: "/imgs/posts/torta_paesana.avif",
+    /* image: "/imgs/posts/torta_paesana.avif", */
     tags: [
       "Dolci",
       "Dolci al cioccolato",
