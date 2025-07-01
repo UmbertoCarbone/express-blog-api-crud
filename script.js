@@ -6,15 +6,9 @@ const blogrouter = require("./routes/rotte")
 
 app.use(express.static("public"))
 
-app.get("/", (req, res) => {
-    res.send("Lista dei post")
-})
-
-app.get("/id", (req, res) => {
-    res.send("Lista dei post " + req.params.id)
-})
-
 app.use("/blog", blogrouter)
+
 app.listen(port, () => {
     console.log(`Example app listening on port http://localhost:${port}`)
 })
+

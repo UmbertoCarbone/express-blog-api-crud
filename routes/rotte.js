@@ -1,15 +1,19 @@
 const express = require("express");
 const router = express.Router();
-
 const posts = require("../data/array")
 
 //Index
 router.get("/", (req, res) => {
   res.json(posts);
+  console.log(posts)
+  
 });
 //Show
 router.get("/:id", (req, res) => {
-  res.json(posts);
+    const id = parseInt(req.params.id);
+    const post = posts.find((post)=> post.id === id);
+  res.json(post);
+  
 });
 
 /* //store
@@ -26,9 +30,22 @@ router.put("/:id", (req, res) => {
   res.send("Modifica parziale del blog" + req.params.id);
 }); */
 
+//Delete
 router.delete("/:id", (req, res) => {
-  const id = parseInt(req.params.id);
-  const post = posts.find((blog) => blog.id === id);
+   const id = parseInt(req.params.id);
+    const post = posts.find((post) => post.id === id);
+    if(!post) {
+        res.status(404);
+
+        return res.json ({
+            status: 404,
+            error: "Not found",
+            message: "Post non trovato"
+        });
+    }
+  posts.splice(posts.indexOf(post),1)
+  res.sendStatus(204)
+  console.log(posts)
 });
 
 module.exports = router;
