@@ -1,0 +1,20 @@
+const express = require("express")
+const app = express()
+const port = 3041
+
+const blogrouter = require("./routes/rotte")
+
+app.use(express.static("public"))
+
+app.get("/", (req, res) => {
+    res.send("Lista dei post")
+})
+
+app.get("/id", (req, res) => {
+    res.send("Lista dei post " + req.params.id)
+})
+
+app.use("/blog", blogrouter)
+app.listen(port, () => {
+    console.log(`Example app listening on port http://localhost:${port}`)
+})
