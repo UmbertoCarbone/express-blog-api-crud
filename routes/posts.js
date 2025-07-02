@@ -8,9 +8,9 @@ router.get("/", (req, res) => {
   if (req.query.tags) {
     filteredMenu = posts.filter((post) => post.tags.includes(req.query.tags));
   }
- /*  res.sendStatus(204); */
+  /*  res.sendStatus(204); */
   res.json(filteredMenu);
-  console.log(filteredMenu)
+  console.log(filteredMenu);
 });
 //Show
 router.get("/:id", (req, res) => {
@@ -19,11 +19,24 @@ router.get("/:id", (req, res) => {
   res.json(post);
 });
 
-/* //store
+//store
 router.post("/", (req, res) => {
-  res.send("Creazione nuovo Blog");
-}); */
-///////
+  //Creiamo un nuovo id incrementando l'ultimo id presente
+  const newPostId = posts[posts.length - 1].id + 1;
+  //creiamo un nuovo oggetto post
+  const newPostObj = {
+    id: newPostId,
+    title: req.body.title,
+    content: req.body.content,
+    tags: req.body.tags,
+  };
+  //aggiungiamo il nuovo post 
+  posts.push(newPostObj)
+  //restituiamo lo status corretto e il post creato
+  res.status(201).json(newPostObj);
+  console.log(newPostObj)
+  
+});
 
 /* //update
 router.put("/:id", (req, res) => {
