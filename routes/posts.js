@@ -30,18 +30,32 @@ router.post("/", (req, res) => {
     content: req.body.content,
     tags: req.body.tags,
   };
-  //aggiungiamo il nuovo post 
-  posts.push(newPostObj)
+  //aggiungiamo il nuovo post
+  posts.push(newPostObj);
   //restituiamo lo status corretto e il post creato
   res.status(201).json(newPostObj);
-  console.log(newPostObj)
-  
+  console.log(newPostObj);
 });
 
-/* //update
+//update
 router.put("/:id", (req, res) => {
-  res.send("Modifica integrale del blog" + req.params.id);
-}); */
+  const id = parseInt(req.params.id);
+  const post = posts.find((post) => post.id === id);
+
+  if (!post) {
+    res.status(404);
+    return res.json({
+      status: 404,
+      error: "Not found",
+      message: "Post non trovato",
+    });
+  }
+  post.title = req.body.title;
+  post.content = req.body.content;
+  post.tags = req.body.tags;
+console.log(post)
+  res.json(post);
+});
 
 /* router.patch("/:id", (req, res) => {
   res.send("Modifica parziale del blog" + req.params.id);
