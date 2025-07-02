@@ -13,7 +13,7 @@ const posts = [
           quella di casa e genuinità: con una manciata di scorze di limone o di arancia e una spolverata
            di zucchero a velo renderete questa soffice delizia profumata e invitante. E per una volta
             sarà la nonna a farvi i complimenti per aver preparato un morbido ciambellone, così buono che non passa mai di moda!`,
-    /* image:  "/imgs/posts/ciambellone.avif",  */
+    image: "/public/ciambellone.jpeg",
     tags: ["Dolci", "Torte", "Ricette vegetariane", "Ricette al forno"],
   },
   {
@@ -28,7 +28,7 @@ const posts = [
               Cracker di lupini
               Cracker allo zafferano
               Cracker ai semi`,
-    /* image: "cracker_barbabietola.avif", */
+    image: "/cracker_barbabietola.jpeg",
     tags: ["Antipasti", "Ricette vegetariane", "Ricette al forno"],
   },
   {
@@ -43,7 +43,7 @@ const posts = [
             Pasta con barbabietola e pecorino
             Gnocchi di barbabietola
             Tagliatelle alla barbabietola con asparagi`,
-    /* image: "/imgs/posts/pasta_barbabietola.avif", */
+    image: "/pasta_barbabietola.jpeg",
     tags: ["Primi piatti", "Ricette vegetariane"],
   },
   {
@@ -53,7 +53,7 @@ const posts = [
      utilizzando gli ingredienti che si avevano sempre a disposizione in casa: pane raffermo, uova, latte e zucchero, che noi abbiamo deciso di aromatizzare con un pizzico di cannella.
       Facile e veloce da realizzare, il pane fritto dolce vi riporterà con la mente ai sapori dell'infanzia… 
       gustatelo da solo o accompagnatelo con frutta fresca e yogurt per uno spuntino tanto goloso quanto genuino!`,
-    /* image: "/imgs/posts/pane_fritto_dolce.avif", */
+    image: "/pane_fritto_dolce.jpeg",
     tags: ["Dolci", "Dolci veloci", "Ricette veloci", "Ricette vegetariane"],
   },
   {
@@ -66,7 +66,7 @@ const posts = [
         A seconda dei gusti e delle disponibilità del momento, al pane ammollato ogni famiglia univa ingredienti diversi,
          chi l'uvetta o chi i pinoli ad esempio. Noi vi presentiamo la nostra versione con l'aggiunta di cacao e amaretti:
           perfetta da gustare per una merenda dal sapore rustico, la torta paesana è un perfetto dolce di recupero quando si ha del pane avanzato… ed è ancora più buona il giorno dopo!`,
-    /* image: "/imgs/posts/torta_paesana.avif", */
+    image: "/torta_paesana.jpeg",
     tags: [
       "Dolci",
       "Dolci al cioccolato",
