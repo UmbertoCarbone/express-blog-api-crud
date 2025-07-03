@@ -2,7 +2,7 @@ const posts = require("../data/posts");
 
 function index(req, res) {
   let filteredMenu = posts;
- //prova per error (500) Umberto()
+  //prova per error (500) Umberto()
   if (req.query.tags) {
     filteredMenu = posts.filter((post) => post.tags.includes(req.query.tags));
   }
@@ -14,12 +14,20 @@ function index(req, res) {
 function show(req, res) {
   const id = parseInt(req.params.id);
   const post = posts.find((post) => post.id === id);
+  if (!post) {
+    res.status(404);
+    return res.json({
+      status: 404,
+      error: "Not found",
+      message: "Post non trovato",
+    });
+  }
   res.json(post);
-  console.log(post)
+  console.log(post);
 }
 
-function post(req,res) {
-      const newPostId = posts[posts.length - 1].id + 1;
+function post(req, res) {
+  const newPostId = posts[posts.length - 1].id + 1;
   //creiamo un nuovo oggetto post
   const newPostObj = {
     id: newPostId,
@@ -34,8 +42,8 @@ function post(req,res) {
   res.status(201).json(newPostObj);
   console.log(newPostObj);
 }
-function update(req,res) {
-    const id = parseInt(req.params.id);
+function update(req, res) {
+  const id = parseInt(req.params.id);
   const post = posts.find((post) => post.id === id);
 
   if (!post) {
@@ -46,16 +54,15 @@ function update(req,res) {
       message: "Post non trovato",
     });
   }
-post.title = req.body.title;
-post.content = req.body.content;
-post.image = req.body.image,
-post.tags = req.body.tags;
-console.log(post)
+  post.title = req.body.title;
+  post.content = req.body.content;
+  (post.image = req.body.image), (post.tags = req.body.tags);
+  console.log(post);
   res.json(post);
 }
 
-function destroy (req,res) {
-      const id = parseInt(req.params.id);
+function destroy(req, res) {
+  const id = parseInt(req.params.id);
   const post = posts.find((post) => post.id === id);
   if (!post) {
     res.status(404);
@@ -70,8 +77,6 @@ function destroy (req,res) {
   res.sendStatus(204);
   console.log(posts);
 }
-
-
 
 module.exports = {
   index,
