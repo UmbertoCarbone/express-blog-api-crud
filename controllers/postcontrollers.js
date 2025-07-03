@@ -2,6 +2,7 @@ const posts = require("../data/posts");
 
 function index(req, res) {
   let filteredMenu = posts;
+ //prova per error (500) Umberto()
   if (req.query.tags) {
     filteredMenu = posts.filter((post) => post.tags.includes(req.query.tags));
   }
@@ -14,6 +15,7 @@ function show(req, res) {
   const id = parseInt(req.params.id);
   const post = posts.find((post) => post.id === id);
   res.json(post);
+  console.log(post)
 }
 
 function post(req,res) {

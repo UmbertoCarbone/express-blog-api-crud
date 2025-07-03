@@ -5,6 +5,7 @@ const router = express.Router();
 // Controller
 const postController = require("../controllers/postcontrollers");
 
+
 //Index
 router.get("/", postController.index);
 
@@ -40,5 +41,6 @@ router.delete("/:id", postController.destroy)
   res.sendStatus(204);
   console.log(posts);
 }); */
+
 
 module.exports = router;
